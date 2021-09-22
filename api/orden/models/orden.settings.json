@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ordens",
+  "info": {
+    "name": "Orden",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "producto": {
+      "model": "producto"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "totalPayment": {
+      "type": "decimal",
+      "required": true
+    },
+    "idPayment": {
+      "type": "string"
+    },
+    "addressShipping": {
+      "type": "json"
+    },
+    "cantidad": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    }
+  }
+}

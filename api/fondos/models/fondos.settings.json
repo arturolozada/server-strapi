@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fondos",
+  "info": {
+    "name": "Fondos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "baner": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "quienes": {
+      "type": "text"
+    },
+    "mision": {
+      "type": "text"
+    },
+    "vision": {
+      "type": "text"
+    },
+    "politica": {
+      "type": "string"
+    }
+  }
+}
